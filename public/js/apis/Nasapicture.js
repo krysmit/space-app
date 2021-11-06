@@ -1,12 +1,19 @@
 const router = require('express').Router();
-const APIKEY = "d19d0c16157ce3486e364b59c5b2484e";
+const fetch = require("node-fetch");
 
-router.get("/fetch_clearsky", async (req, res) => {
-    const url = "api.openweathermap.org/data/2.5/weather?q={city name}&appid=" + {APIKEY};
+const APIKEY = "UlqFPsb7PaDOHkro32uIwkjq9OVZogifJ7SVAPkL";
+
+
+
+router.get("/fetch_image", async (req, res) => {
+    console.log("/fetch_image endpoint called");
+    const url = `https://api.nasa.gov/planetary/apod?api_key=${APIKEY}`;
     const options = {   
         "method": "GET",
     }
+
     
+
     const response = await fetch(url, options)
     .then(res => res.json())
     .catch(e => {
@@ -19,7 +26,10 @@ router.get("/fetch_clearsky", async (req, res) => {
     console.log("RESPONSE ", response);
     res.json(response.url);
 
-    const clear = response.json;
-    return clear;
+    const image = response.hdurl;
+    console.log(image);
 
+    
+
+    
 });

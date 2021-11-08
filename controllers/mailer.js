@@ -8,6 +8,7 @@ const transporter = nodemailer.createTransport(
       pass: "password12345"
     }
   });
+
 const options = {
   from: "spaceapp1234567@outlook.com",
   //to: newsemail information goes here,
@@ -15,6 +16,7 @@ const options = {
   text: "Thank you for singing up! 🪐" 
 }
 
+function sendEmail() { 
 transporter.sendMail(options, function (err, info) {
   if(err){
     console.log(err);
@@ -22,3 +24,6 @@ transporter.sendMail(options, function (err, info) {
   }
   console.log("Sent: " + info.response);
 });
+}
+
+document.getElementById("locationsub").addEventListener("click", sendEmail);

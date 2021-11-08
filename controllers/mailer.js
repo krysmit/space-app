@@ -12,7 +12,7 @@ const options = {
   from: "spaceapp1234567@outlook.com",
   //to: newsemail information goes here,
   subject: "Welcome to the Astronomy Weekly Newsletter",
-  text: "Thank you for singing up! "
+  text: "Thank you for singing up! 🪐" 
 }
 
 transporter.sendMail(options, function (err, info) {

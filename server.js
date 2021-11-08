@@ -6,6 +6,18 @@ const routes = require('./controllers');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
+const transporter = nodemailer.createTransport(
+  {
+    service: "hotmail",
+    auth: {
+      user: "spaceapp1234567@outlook.com",
+      pass: "password12345"
+    }
+  });
+const options = {
+  from: ""
+}
+
 //database
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -33,6 +45,8 @@ app.use(session(sess));
 // Inform Express.js on which template engine to use
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

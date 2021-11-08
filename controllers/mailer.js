@@ -26,4 +26,9 @@ transporter.sendMail(options, function (err, info) {
 });
 }
 
-document.getElementById("locationsub").addEventListener("click", sendEmail);
+document.getElementById("emailsub").addEventListener("click", sendEmail);
+document.getElementById("emailsub").addEventListener("click", dispThanks);
+
+function dispThanks() {
+  document.getElementById("thankyou").innerHTML = "Thanks for signing up!";
+}

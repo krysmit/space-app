@@ -10,9 +10,9 @@ const transporter = nodemailer.createTransport(
   });
 const options = {
   from: "spaceapp1234567@outlook.com",
-  //to: "USER INPUT NEEDS TO BE HERE",
-  subject: "Test Email!!!",
-  text: "Is this thing working?"
+  //to: newsemail information goes here,
+  subject: "Welcome to the Astronomy Weekly Newsletter",
+  text: "Thank you for singing up! "
 }
 
 transporter.sendMail(options, function (err, info) {

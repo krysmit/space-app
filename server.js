@@ -4,15 +4,18 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 
+//database
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+//displaying the server and where it is listening to
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({});
 
+//logging in and database secuirty
 const sess = {
   secret: 'Super secret secret',
   cookie: {},

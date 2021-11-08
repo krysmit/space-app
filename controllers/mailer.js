@@ -1,3 +1,4 @@
+const router = require('express').Router();
 const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport(
@@ -8,6 +9,7 @@ const transporter = nodemailer.createTransport(
       pass: "password12345"
     }
   });
+
 const options = {
   from: "spaceapp1234567@outlook.com",
   //to: newsemail information goes here,
@@ -15,6 +17,7 @@ const options = {
   text: "Thank you for singing up! 🪐" 
 }
 
+function sendEmail() { 
 transporter.sendMail(options, function (err, info) {
   if(err){
     console.log(err);
@@ -22,3 +25,17 @@ transporter.sendMail(options, function (err, info) {
   }
   console.log("Sent: " + info.response);
 });
+}
+
+document.getElementById("emailsub").addEventListener("click", sendEmail);
+document.getElementById("emailsub").addEventListener("click", dispThanks);
+
+function dispThanks() {
+  document.getElementById("thankyou").innerHTML = "Thanks for signing up!";
+}
+
+router.post('/send', (req, res) => {
+  console.log("information accepted");
+})
+
+module.exports = router;

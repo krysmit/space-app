@@ -1,3 +1,4 @@
+const router = require('express').Router();
 const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport(
@@ -32,3 +33,9 @@ document.getElementById("emailsub").addEventListener("click", dispThanks);
 function dispThanks() {
   document.getElementById("thankyou").innerHTML = "Thanks for signing up!";
 }
+
+router.post('/send', (req, res) => {
+  console.log("information accepted");
+})
+
+module.exports = router;

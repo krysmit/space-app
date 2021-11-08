@@ -15,8 +15,19 @@ const transporter = nodemailer.createTransport(
     }
   });
 const options = {
-  from: ""
+  from: "spaceapp1234567@outlook.com",
+  to: "krystynsmith@hotmail.com",
+  subject: "Test Email!!!",
+  text: "Is this thing working?"
 }
+
+transporter.sendMail(options, function (err, info) {
+  if(err){
+    console.log(err);
+    return;
+  }
+  console.log("Sent: " + info.response);
+});
 
 //database
 const sequelize = require('./config/connection');

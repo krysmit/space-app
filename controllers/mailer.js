@@ -10,7 +10,7 @@ const transporter = nodemailer.createTransport(
   });
 const options = {
   from: "spaceapp1234567@outlook.com",
-  to: "krystynsmith@hotmail.com",
+  //to: "USER INPUT NEEDS TO BE HERE",
   subject: "Test Email!!!",
   text: "Is this thing working?"
 }

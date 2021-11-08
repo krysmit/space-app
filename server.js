@@ -3,30 +3,6 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
-const nodemailer = require('nodemailer');
-
-const transporter = nodemailer.createTransport(
-  {
-    service: "hotmail",
-    auth: {
-      user: "spaceapp1234567@outlook.com",
-      pass: "password12345"
-    }
-  });
-const options = {
-  from: "spaceapp1234567@outlook.com",
-  to: "krystynsmith@hotmail.com",
-  subject: "Test Email!!!",
-  text: "Is this thing working?"
-}
-
-transporter.sendMail(options, function (err, info) {
-  if(err){
-    console.log(err);
-    return;
-  }
-  console.log("Sent: " + info.response);
-});
 
 //database
 const sequelize = require('./config/connection');

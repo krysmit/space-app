@@ -1,5 +1,3 @@
-//THE PAGE TO COMPILE SAVED CITIES/FAVORITES
-
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 

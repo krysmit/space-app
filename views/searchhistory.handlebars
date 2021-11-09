@@ -2,10 +2,11 @@
 
     <h2>Search History</h2>
         <ul>
-            <li>City, State</li>
-            <li>City, State</li>
-            <li>City, State</li>
+            {{#each projects as |project| }}
+            <li>{{project.city}}, {{project.state}}</li>
+            {{/each}}
         </ul>
+
 
 
 </div>

@@ -1,25 +1,10 @@
-const router = require('express').Router();
-const APIKEY = "d19d0c16157ce3486e364b59c5b2484e";
+fetch('/fetch_data').then(res => res.json()).then(data => {
+    console.log(data);
+    var tm = data.sys.sunset;
+    var time = new Date(tm * 1000).toTimeString();
+    var date = new Date(tm * 1000).toDateString();
 
-router.get("/fetch_clearsky", async (req, res) => {
-    const url = "api.openweathermap.org/data/2.5/weather?q={city name}&appid=" + {APIKEY};
-    const options = {   
-        "method": "GET",
-    }
-    
-    const response = await fetch(url, options)
-    .then(res => res.json())
-    .catch(e => {
-        console.error({
-            "message": "no",
-            error: e,
-        });
-    });
-
-    console.log("RESPONSE ", response);
-    res.json(response.url);
-
-    const clear = response.json;
-    return clear;
-
-});
+    console.log(date, time);
+}).catch(err => {
+   console.log(err);
+})

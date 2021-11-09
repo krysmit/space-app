@@ -1,35 +1,7 @@
-const router = require('express').Router();
-const fetch = require("node-fetch");
-
-const APIKEY = "UlqFPsb7PaDOHkro32uIwkjq9OVZogifJ7SVAPkL";
-
-
-
-router.get("/fetch_image", async (req, res) => {
-    console.log("/fetch_image endpoint called");
-    const url = `https://api.nasa.gov/planetary/apod?api_key=${APIKEY}`;
-    const options = {   
-        "method": "GET",
-    }
-
-    
-
-    const response = await fetch(url, options)
-    .then(res => res.json())
-    .catch(e => {
-        console.error({
-            "message": "no",
-            error: e,
-        });
-    });
-
-    console.log("RESPONSE ", response);
-    res.json(response.url);
-
-    const image = response.hdurl;
-    console.log(image);
-
-    
-
-    
-});
+fetch('/fetch_image').then(res => res.json()).then(data => {
+    console.log(data);
+    var img = document.getElementById('Nasaimg');
+    img.setAttribute('src', data);
+}).catch(err => {
+   console.log(err);
+})

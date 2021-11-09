@@ -1,5 +1,43 @@
+* {
+  background-color: #050505;
+  color: #edf2f5;
+  background-image: url(https://www.fireworks-videos.com/wp-content/uploads/2020/05/2020-05-17_colorful-night-sky_stars-and-milky-way-with-moon_2160p.jpg);
+}
+
+
+a {
+  font-family: "Bahnschrift SemiBold";
+  color: #edf2f5;
+}
+
+a:hover{
+color: #65738a;
+}
+
+h1, h2, h3 {
+  font-family: "Bahnschrift SemiBold";
+  font-size: 32px;
+  color: #edf2f5;
+  background-color: black;
+  
+}
+
+form {
+  color: #edf2f5;
+}
+
+nav {
+  font-family: "Bahnschrift SemiBold";
+}
+
+button {
+  background-color: #edf2f5;
+  font-family: "Bahnschrift SemiBold" 
+}
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
+  font-family: "Bahnschrift SemiBold";
+  color: #edf2f5;
 }
 
 .no-button {
@@ -7,18 +45,18 @@ header, .project:not(:last-child) {
   border: none;
   padding: 0;
   cursor: pointer;
-  color: #1b89bc;
+  color: #edf2f5;
   text-decoration: none;
   font-size: 100%;
+  
 }
 
 .no-button:hover {
-  color: #065b83;
+  color: #65738a;
   text-decoration: underline;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+#Nasaimg {
+  width: 100%;
+  height: auto;
 }

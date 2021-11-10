@@ -56,7 +56,15 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
-#Nasaimg {
+.dollar-amount {
+  color: #056605;
+  font-weight: bold;
+  margin-left: -5px;
+} 
+ #Nasaimg {
+  display: inline;
+  margin-left: 300px;
+  margin-right: 50px;
   width: 100%;
   height: auto;
 }

@@ -17,6 +17,9 @@ When you load the website the first screen will have a title at the top, and the
 ### Github Repository
 https://github.com/krysmit/space-app
 
+### Presentation 
+https://docs.google.com/presentation/d/119S0CBUxpkuBxrIFpLYVRMjKW2E04-MN_qJgsQNRBBk/edit#slide=id.g10113e1a35b_0_143
+
 ### Collaborators
 - Krystyn Smith (https://github.com/krysmit)
 - Walter Armstrong (https://github.com/BATORASAN)

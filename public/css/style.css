@@ -62,9 +62,6 @@ header, .project:not(:last-child) {
   margin-left: -5px;
 } 
  #Nasaimg {
-  display: inline;
-  margin-left: 300px;
-  margin-right: 50px;
   width: 100%;
   height: auto;
 }
